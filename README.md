@@ -3,6 +3,12 @@ Xolv.io Cleaner
 
 This package clears your entire database for testing purposes.
 
+To learn more about testing with Meteor, consider purchasing our book [The Meteor Testing Manual](http://www.meteortesting.com/?utm_source=Cucumber&utm_medium=banner&utm_campaign=Cucumber).
+
+[![](http://www.meteortesting.com/img/tmtm.gif)](http://www.meteortesting.com/?utm_source=Cucumber&utm_medium=banner&utm_campaign=Cucumber)
+
+Your support helps us continue our work on Velocity and related frameworks.
+
 **WARNING: BE SURE TO NEVER CONNECT TO A LIVE DATABASE WHEN YOU HAVE THIS PACKAGE INSTALLED. 
 YOU WILL DELETE ALL YOUR COLLECTIONS!!**
 
