@@ -3,7 +3,15 @@ Xolv.io Cleaner
 
 This package clears your entire database for testing purposes.
 
-**WARNING: BE SURE TO NEVER CONNECT TO A LIVE DATABASE WHEN YOU HAVE THIS PACKAGE INSTALLED. 
+#Get the Book
+To learn more about testing with Meteor, consider purchasing our book [The Meteor Testing Manual](http://www.meteortesting.com/?utm_source=cleaner&utm_medium=banner&utm_campaign=cleaner).
+
+[![](http://www.meteortesting.com/img/tmtm.gif)](http://www.meteortesting.com/?utm_source=cleaner&utm_medium=banner&utm_campaign=cleaner)
+
+Your support helps us continue our work on Velocity and related frameworks.
+
+#WARNING 
+BE SURE TO NEVER CONNECT TO A LIVE DATABASE WHEN YOU HAVE THIS PACKAGE INSTALLED. 
 YOU WILL DELETE ALL YOUR COLLECTIONS!!**
 
 The package has two levels of safety built-in: 
@@ -32,11 +40,3 @@ var cleaner = Package['xolvio:cleaner'];
 // delete all collections
 cleaner.resetDatabase();
 ```
-
-
-#Get the Book
-To learn more about testing with Meteor, consider purchasing our book [The Meteor Testing Manual](http://www.meteortesting.com/?utm_source=cleaner&utm_medium=banner&utm_campaign=cleaner).
-
-[![](http://www.meteortesting.com/img/tmtm.gif)](http://www.meteortesting.com/?utm_source=cleaner&utm_medium=banner&utm_campaign=cleaner)
-
-Your support helps us continue our work on Velocity and related frameworks.
