@@ -2,11 +2,10 @@ resetDatabase = function (options) {
   if (process.env.NODE_ENV !== 'development' ||
      !(process.env.IS_MIRROR || process.env.VELOCITY_TEST_PACKAGES)
   ) {
-    console.error(
+    throw new Error(
       'resetDatabase is not allowed outside of a mirror. ' +
       'Something has gone wrong.'
     );
-    return;
   }
 
   options = options || {};
