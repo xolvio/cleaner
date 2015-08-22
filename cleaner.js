@@ -1,5 +1,7 @@
-resetDatabase = function () {
-  if (!process.env.IS_MIRROR && !process.env.VELOCITY_TEST_PACKAGES) {
+resetDatabase = function (options) {
+  if (process.env.NODE_ENV !== 'development' ||
+     !(process.env.IS_MIRROR || process.env.VELOCITY_TEST_PACKAGES)
+  ) {
     console.error(
       'resetDatabase is not allowed outside of a mirror. ' +
       'Something has gone wrong.'
@@ -7,12 +9,18 @@ resetDatabase = function () {
     return;
   }
 
+  options = options || {};
+  var excludedCollections = ['system.indexes'];
+  if (options.excludedCollections) {
+    excludedCollections = excludedCollections.concat(options.excludedCollections);
+  }
+
   var db = MongoInternals.defaultRemoteCollectionDriver().mongo.db;
   var getCollections = Meteor.wrapAsync(db.collections, db);
   var collections = getCollections();
   var appCollections = _.reject(collections, function (col) {
     return col.collectionName.indexOf('velocity') === 0 ||
-      ['system.indexes'].indexOf(col.collectionName) !== -1;
+      excludedCollections.indexOf(col.collectionName) !== -1;
   });
 
   _.each(appCollections, function (appCollection) {
