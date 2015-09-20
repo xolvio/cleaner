@@ -6,11 +6,9 @@ Package.describe({
 });
 
 Package.onUse(function(api) {
-
   api.addFiles([
     'cleaner.js'
-  ], 'server');
+  ], ['client', 'server']);
 
   api.export('resetDatabase', 'server');
-
 });
