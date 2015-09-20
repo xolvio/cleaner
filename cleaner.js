@@ -27,3 +27,11 @@ resetDatabase = function (options) {
     remove({});
   });
 };
+
+if (Meteor.isClient) {
+  Meteor.methods({
+    resetDatabase: function () {
+      resetDatabase();
+    }
+  });
+}
