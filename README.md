@@ -19,7 +19,7 @@ meteor add xolvio:cleaner
 
 # Usage
 
-resetDatabase only resets your database when it is executed inside a testing mirror.
+resetDatabase only resets your database when it is executed inside a debugOnly environment.
 
 You can clear your database with:
 
