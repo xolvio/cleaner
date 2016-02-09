@@ -38,5 +38,5 @@ You can do this inside a Meteor method and call it from your client tests.
 var cleaner = Package['xolvio:cleaner'];
 
 // delete all collections except myCollection
-cleaner.resetDatabase({excludedCollections: ['myCollection']);
+cleaner.resetDatabase({excludedCollections: ['myCollection']});
 ```
