@@ -1,8 +1,10 @@
 Package.describe({
   name: 'xolvio:cleaner',
+  summary: 'Gives you methods to clear your Mongo database and collections for testing purposes',
   version: '0.2.0',
+  git: 'https://github.com/xolvio/cleaner.git',
+  documentation: 'README.md',
   debugOnly: true,
-  summary: 'Gives you methods to clear your Mongo database and collections for testing purposes'
 });
 
 Package.onUse(function(api) {
