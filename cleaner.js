@@ -40,8 +40,7 @@ if (Meteor.isServer) {
 
 }
 if (Meteor.isClient) {
-  resetDatabase = function(options, _callback) {
-    const callback = (typeof _callback === 'function') ? _callback : undefined;
+  resetDatabase = function(options, callback) {
     Meteor.call('xolvio:cleaner/resetDatabase', options, callback);
   }
 }
