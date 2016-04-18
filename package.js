@@ -13,3 +13,13 @@ Package.onUse(function(api) {
   api.addFiles('cleaner.js', ['client', 'server']);
   api.export('resetDatabase', ['client', 'server']);
 });
+
+Package.onTest(function(api) {
+  api.versionsFrom('1.3');
+  api.use('xolvio:cleaner');
+  api.use('ecmascript');
+  api.use('sanjo:jasmine@1.0.1');
+  api.use('velocity:html-reporter@0.10.0');
+
+  api.addFiles('tests/cleaner.js', ['server', 'client']);
+});
