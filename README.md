@@ -1,5 +1,5 @@
 Xolv.io Cleaner
-=============== 
+===============
 
 This package clears your entire database for testing purposes.
 
@@ -23,6 +23,8 @@ resetDatabase only resets your database when it is executed inside a debugOnly e
 
 You can clear your database with:
 
+### Server
+
 ```javascript
 var cleaner = Package['xolvio:cleaner'];
 
@@ -30,13 +32,31 @@ var cleaner = Package['xolvio:cleaner'];
 cleaner.resetDatabase();
 ```
 
-You can do this inside a Meteor method and call it from your client tests.
+### Client
+
+```javascript
+var cleaner = Package['xolvio:cleaner'];
+
+// delete all collections
+cleaner.resetDatabase(null, callback);
+```
 
 ## Don't reset certain collection
+
+### Server
 
 ```javascript
 var cleaner = Package['xolvio:cleaner'];
 
 // delete all collections except myCollection
 cleaner.resetDatabase({excludedCollections: ['myCollection']});
+```
+
+### Client
+
+```javascript
+var cleaner = Package['xolvio:cleaner'];
+
+// delete all collections except myCollection
+cleaner.resetDatabase({excludedCollections: ['myCollection']}, callback);
 ```
