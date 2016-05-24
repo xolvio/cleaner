@@ -9,7 +9,7 @@ Package.describe({
 
 Package.onUse(function(api) {
   api.versionsFrom('1.3');
-  api.use('ecmascript');
+  api.use(['ecmascript', 'mongo', 'underscore']);
   api.addFiles('cleaner.js', ['client', 'server']);
   api.export('resetDatabase', ['client', 'server']);
 });
