@@ -6,6 +6,9 @@ Package.describe({
   documentation: 'README.md',
   debugOnly: true,
 });
+Npm.depends({
+  "mongodb-uri": "0.9.7"
+});
 
 Package.onUse(function(api) {
   api.versionsFrom('1.3');
