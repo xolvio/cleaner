@@ -23,7 +23,7 @@ if (Meteor.isServer) {
 
     _.each(appCollections, function (appCollection) {
       var remove = Meteor.wrapAsync(appCollection.remove, appCollection);
-      remove({});
+      remove();
     });
   };
 
