@@ -7,6 +7,21 @@ if (Meteor.isServer) {
       );
     }
 
+    // avoid the unintentional deletions of production databases
+    if (typeof process.env.MONGO_URL === 'string') {
+      var mongodbUri = Npm.require('mongodb-uri');
+      const hosts = mongodbUri.parse(process.env.MONGO_URL).hosts;
+      
+      if (hosts.find(h => h.host !== "localhost") 
+          && process.env.ALLOW_CLEANING_REMOTE_DATABASE_DURING_TEST !== '1') {
+        throw Error("Since $MONGO_URL contains hosts other than `localhost` " +
+                    "you should set the special environment variable " +
+                    "ALLOW_CLEANING_REMOTE_DATABASE_DURING_TEST to 1 " +
+                    "as a safety measure."
+        );
+      }
+    }
+
     options = options || {};
     var excludedCollections = ['system.indexes'];
     if (options.excludedCollections) {

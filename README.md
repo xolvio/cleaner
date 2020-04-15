@@ -60,3 +60,13 @@ var cleaner = Package['xolvio:cleaner'];
 // delete all collections except myCollection with optional callback
 cleaner.resetDatabase({excludedCollections: ['myCollection']}, callback);
 ```
+
+### When using a database outside of localhost
+This package resets the database configured for Meteor.
+In order to prevent the accidental deletion of a production database, a special flag was added.
+
+If your `MONGO_URL` includes hosts other than `localhost` and you actually intend for this external database to be reset by this package, please set the `ALLOW_CLEANING_REMOTE_DATABASE_DURING_TEST` environment variable to `1`.
+
+```sh
+export ALLOW_CLEANING_REMOTE_DATABASE_DURING_TEST=1
+```
