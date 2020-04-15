@@ -13,7 +13,7 @@ if (Meteor.isServer) {
       excludedCollections = excludedCollections.concat(options.excludedCollections);
     }
 
-    var db = MongoInternals.defaultRemoteCollectionDriver().mongo.db;
+    var db = options.db || MongoInternals.defaultRemoteCollectionDriver().mongo.db;
     var getCollections = Meteor.wrapAsync(db.collections, db);
     var collections = getCollections();
     var appCollections = _.reject(collections, function (col) {
