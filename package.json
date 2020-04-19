@@ -1,6 +1,0 @@
-{
-  "private": true,
-  "scripts": {
-    "test": "meteor test-packages --driver-package=sanjo:jasmine ./"
-  }
-}
