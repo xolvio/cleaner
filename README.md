@@ -24,8 +24,6 @@ import { resetDatabase } from 'meteor/xolvio:cleaner';
 resetDatabase(null, callback);
 ```
 
-You can use `options.db`
-
 ## Provide specific database instance
 ```javascript
 // delete all collections except myCollection with optional callback
