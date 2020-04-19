@@ -3,7 +3,7 @@ Xolv.io Cleaner
 
 This package cleans your database for testing purposes. 
 
-[Visit Xolv.io to find out more about what we do](https://www.xolv.io)
+[Visit Xolv.io to find out more about what we do](https://www.xolv.io).
 
 # Installation
 
