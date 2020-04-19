@@ -3,8 +3,6 @@ Xolv.io Cleaner
 
 This package cleans your database for testing purposes. 
 
-[Visit Xolv.io to find out more about what we do](https://www.xolv.io).
-
 # Installation
 
 ```
@@ -38,3 +36,10 @@ resetDatabase({excludedCollections: ['myCollection']}, callback);
 
 # About Xolv.io
 
+We help you on your journey to delivering higher quality software, faster. We offer:
+* Software development services (including but not limited to Meteor development)
+* Modernization services
+* Training
+* SaaS products that allow you to up your own game
+
+[Visit Xolv.io to find out more about what we do](https://www.xolv.io).
