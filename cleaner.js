@@ -33,14 +33,14 @@ if (Meteor.isServer) {
     }
   });
 
-  resetDatabase = function(options, callback) {
+  module.exports.resetDatabase = function(options, callback) {
     _resetDatabase(options);
     if (typeof callback === 'function') { callback(); }
   }
 
 }
 if (Meteor.isClient) {
-  resetDatabase = function(options, callback) {
+  module.exports.resetDatabase = function(options, callback) {
     Meteor.call('xolvio:cleaner/resetDatabase', options, callback);
   }
 }
